@@ -1,0 +1,62 @@
+﻿@model AvansSurplusMealService.ViewModels.NavBarVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<nav class="navbar navbar-expand-lg NavBar">
+    <div class="container">
+        <a class="navbar-brand m-0" asp-action="StartPagina" asp-controller="Home">
+            <img class="Logo" src="~/images/Logo AvansSurplusMeals PNG Vierkant.png">
+        </a>
+        <!-- Sidebalk -->
+        <!-- Zijbalk kleine schermen -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigatielijst -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="Home">Home</a>
+                </li>
+                @if (Model.Role != null && (Model.Role == "Personel" || Model.Role == "Admin")){
+                <li class="nav-item">
+                        <a class="nav-link" asp-action="StartPagina" asp-controller="Home">Kantinebeheer</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="MealPacketManagement" asp-controller="ContentManagement">Maaltijdenbeheer</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="Home">Reserveringsbeheer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="Home">Productbeheer</a>
+                </li>
+                }
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button id="AccountBtn" class="btn dropdown-toggle AccountDropDown" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="~/css/Placeholder Image.png" alt="AccountIcoon" height="50" width="60"><br />
+                Gebruiker
+            </button>
+            <div class="dropdown-menu">
+                @if (Model.Email == null)
+                {
+                    <a class="dropdown-item" asp-action="Login" asp-controller="Account">Inloggen</a>
+                    <a class="dropdown-item" href="">Registratie</a>
+                }
+                else
+                {
+                    <a class="dropdown-item" href="">Profiel</a>
+                    <a class="dropdown-item" asp-action="ProfileReservations" asp-controller="Profile" asp-route-id=@Model.Email>Eigen reserveringen</a>
+                    <a class="dropdown-item" asp-action="SignOut" asp-controller="Account">Uitloggen</a>
+                }
+
+            </div>
+        </div>
+    </div>
+</nav>

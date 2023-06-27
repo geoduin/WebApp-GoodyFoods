@@ -1,0 +1,36 @@
+﻿.ManagementBox {
+    background-color: white;
+    margin: 14px auto;
+    color: #317042;
+    padding: 1em;
+}
+
+.ManagementBoxOutside{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.THd{
+    background-color: #1C1EA8;
+    color: white;
+    padding: 1em;
+}
+
+.TItem {
+    background-color: white;
+    padding: 8px;
+}
+
+.ContentTable{
+    width: 100%;
+    background-color: white;
+    border: #1C1EA8 solid;
+}
+
+h2{
+    text-align: start
+}
+
+.TabBackground{
+    background-color: white;
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AvansSurplusMealService</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AvansSurplusMealService.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/views/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/views/List.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/views/Detail.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/views/Content.css" />
+    <link rel="shortcut icon" href="~/favicon.ico" />
+</head>
+<body class="h-100 p-0">
+    <header>
+        @await Component.InvokeAsync("Navbar")
+    </header>
+    <main class="h-100">
+       @RenderBody()
+    </main>
+
+    <footer>
+        <h3>Footer</h3>
+        <div class="container">
+            &copy; 2022 - AvansSurplusMealService - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

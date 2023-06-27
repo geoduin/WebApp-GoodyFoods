@@ -1,0 +1,110 @@
+﻿
+.Achtergrond {
+    background-image: url(../Placeholder\ Image.png);
+}
+
+.ImageBox {
+    position: relative;
+    width: 100%;
+}
+
+    .ImageBox img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .ImageBox button {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #317042;
+        color: #D2E5FF;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .ImageBox h1 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        color: #FFAB3C;
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .ImageBox button:hover {
+        color: #FFAB3C;
+        background-color: aquamarine;
+        opacity: 100%;
+    }
+
+.InlogBox {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 12px;
+}
+
+.InlogBox-Content {
+    padding: 3em;
+    margin: auto;
+}
+
+    .InlogBox-Content button {
+        padding: 1em;
+        margin: 1em;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.RecommendedList {
+    margin: 1em;
+}
+
+._List {
+    justify-content: space-evenly;
+}
+
+.Blue-Banner {
+    background-color: #1C1EA8;
+    color: #FFAB3C;
+}
+
+.Light-Banner {
+    background-color: #D2E5FF;
+    color: #317042;
+}
+
+.Orange-Banner {
+    background-color: white;
+    color: #317042;
+}
+
+.Element-Center {
+    margin: auto;
+    width: 85%;
+}
+
+.Element-Content {
+    padding: 1em;
+}
+
+.Banner-Content {
+    padding: 1em;
+}
+
+.BarPart {
+    background-color: #1C1EA8;
+}

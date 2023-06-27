@@ -1,0 +1,50 @@
+﻿@model AvansSurplusMealService.ViewModels.RegistrationViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_AccountLayout";
+}
+
+
+<main>
+    <h1>Registratieformulier student</h1>
+    <form asp-action="RegistrationUser" class="text-center InlogBox InlogBox-Content">
+        <div>
+            <label asp-for="Name">Voor en achternaam</label>
+            <input type="text" asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="Email">Emailadres</label>
+            <input type="email" asp-for="Email"/>
+        </div>
+        <div>
+            <label asp-for="StudentNumber">Studentnummer</label>
+            <input asp-for="StudentNumber" />
+        </div>
+
+        <div>
+            <label asp-for="DateOfBirth">Geboortedatum</label>
+            <!--Vervangen worden door een kalender-->
+            <input type="datetime" asp-for="DateOfBirth" />
+        </div>
+
+        <div>
+            <label asp-for="Password">Wachtwoord</label>
+            <input type="password" asp-for="Password" />
+        </div>
+
+        <div>
+            <label asp-for="PasswordConfirmed">Wachtwoord herhalen</label>
+            <input type="password" asp-for="PasswordConfirmed" />
+        </div>
+
+        <div>
+            <label class ="form-check-label" for="invalidCheck">
+                Accepteer algemene voorwaarden</label>
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+        </div>
+        <button type="submit">Registreer</button>
+    </form>
+</main>

@@ -1,0 +1,72 @@
+﻿@model AvansSurplusMealService.ViewModels.MealPacketManageVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_PersonelLayout";
+}
+
+<section class="container TabBackground">
+    <ul class="nav nav-tabs">
+        
+        <li class="nav-item">
+            @if(Model.CurrentCanteen == null){
+                <a class="nav-link active" asp-action="MealPacketManagement" asp-controller="ContentManagement">Eigen kantine</a>
+            } else{
+                <a class="nav-link" asp-action="MealPacketManagement" asp-controller="ContentManagement">Eigen kantine</a>
+            }
+        </li>
+        @foreach(var Canteen in Model.CantineList){
+            if(Canteen.Id == Model.CurrentCanteen?.Id){
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-action="MealPacketManagementChoice" asp-controller="ContentManagement" asp-route-id=@Canteen.Id>@Canteen.City - @Canteen.Location</a>
+                </li>
+            } else{
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="MealPacketManagementChoice" asp-controller="ContentManagement" asp-route-id=@Canteen.Id>@Canteen.City - @Canteen.Location</a>
+                </li>
+            }
+        }
+    </ul>
+
+    <div class="row">
+        <h1 class="col-7">Maaltijdenlijst</h1>
+        <div class="col-5">
+            <button class="InfoButton float-end">
+                Toevoegen
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <table class="ContentTable">
+        <tr >
+                <th class="THd">Id</th>
+                <th class="THd">Naam</th>
+                <th class="THd">Prijs</th>
+                <th class="THd">Publicatiedatum</th>
+                <th class="THd">Deadlinedatum</th>
+                <th class="THd">Type</th>
+                <th class="THd">Stad</th>
+                <th class="THd">Locatie</th>
+                <th class="THd">Wijzigen</th>
+        </tr>
+        @foreach(var meals in Model.CurrentList){
+            <tr>
+                    <td class="TItem">@meals.Id</td>
+                    <td class="TItem">@meals.Name</td>
+                    <td class="TItem">@meals.Price</td>
+                    <td class="TItem">@meals.PublishDate.ToShortDateString()</td>
+                    <td class="TItem">@meals.DeadlineDate.ToShortDateString()</td>
+                    <td class="TItem">@meals.TypeMeal</td>
+                    <td class="TItem">@meals.Cantine.City</td>
+                    <td class="TItem">@meals.Cantine.Location</td>
+                    <td class="TItem">
+
+                        <button class="btn-danger float-end">Verwijderen</button>
+                        <button class="LightInfoButton float-end">Wijzig</button>
+                </td>
+            </tr>
+        }
+     </table>
+</div>
+</section>

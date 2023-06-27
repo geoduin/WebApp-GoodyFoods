@@ -1,0 +1,97 @@
+﻿article {
+    background-color: white;
+    color: #317042;
+    text-align: start;
+}
+
+.SubmitButton {
+    background-color: #1C1EA8;
+    color: #95FF7E;
+}
+
+.Content {
+    padding: 1em;
+    text-align: start;
+}
+
+section {
+    margin: 1em;
+}
+
+.Content p {
+    text-align: start;
+}
+
+.ProductItemPicture {
+}
+
+.TableHeader {
+    background-color: #1C1EA8;
+    color: #FFE5CC;
+    padding: 1em;
+}
+
+.TableD {
+    background-color: #FFE5CC;
+    padding: 1em;
+}
+
+.tableBody {
+    background-color: #FFE5CC;
+    width: 100%;
+    border-right: #1C1EA8 solid;
+}
+
+.FlexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+    .FlexBox > .Flex-Item {
+        margin: 1em;
+        background-color: #317042;
+        border: #317042 solid;
+    }
+
+.Flex-Item {
+    color: #FFAB3C;
+}
+
+.BarPartDetail {
+    background-color: #317042;
+}
+
+.GreenTxt {
+    color: #317042;
+}
+
+.Description {
+    padding: 1em;
+    margin: 1em;
+}
+
+.ReserveerSectie {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 12px;
+}
+
+.location {
+    margin: 1em;
+    padding: 1em;
+}
+
+.TitleBorder {
+    border-bottom: #1C1EA8 outset;
+    margin: 1em 0px 1em 0px;
+}
+
+.DetailTitel {
+}
+
+
+p {
+    text-align: center;
+}

@@ -1,0 +1,184 @@
+﻿body {
+    background-color: #FFE5CC;
+    margin: 0px auto;
+    height: fit-content;
+}
+
+.Darker {
+    filter: brightness(75%);
+}
+/* Navbar color */
+.NavBar {
+    background-color: #FFE5CC;
+}
+
+    .NavBar a {
+        color: #1C1EA8;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: larger;
+    }
+
+        .NavBar a:hover {
+            color: #FFAB3C;
+            background-color: #1C1EA8;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+/* Footer styles */
+footer {
+    background-color: #1C1EA8;
+    color: white;
+    margin: 0px;
+    bottom: 0;
+    line-height: 80px;
+    padding-bottom: 33px;
+    white-space: nowrap;
+}
+
+/* Afbeelding configuratie */
+/* Titels: Georgia of  Tekst Courier of Helvetica */
+h1,
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h3,
+h4 {
+    text-align: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+p {
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+button {
+    font-size: larger;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    button:hover {
+        opacity: 75%;
+    }
+
+a {
+    text-decoration: none;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.InfoButton {
+    background-color: #317042;
+    color: white;
+}
+
+.ImportantBtn {
+    background-color: #1C1EA8;
+    color: #FFAB3C;
+}
+
+.TagButton {
+    background-color: #BECCFA;
+    color: #1C1EA8;
+    border: #1C1EA8 solid;
+    padding: 5px 1em 5px 1em;
+}
+
+.CardPacket {
+    background-color: white;
+    color: #1C1EA8;
+}
+
+.InlogKnop {
+    color: #FFE5CC;
+    background-color: #1C1EA8;
+    border: #317042;
+    border-radius: 0%;
+}
+
+.ReserveButton {
+    background-color: #1C1EA8;
+    color: #FFAB3C;
+}
+
+.Logo{
+    max-height: 80px;
+    max-width: 80px
+}
+
+.Logo:hover{
+    background-color: #FFE5CC;
+}
+
+.CatagoryButton {
+    background-color: #FFAB3C;
+    color: #1C1EA8;
+}
+
+
+.LightInfoButton {
+    background-color: white;
+    color: #317042;
+}
+
+.blueTxt {
+    color: #1C1EA8;
+}
+
+/* Dropdown navigatiebalk */
+.AccountDropDown {
+    background-color: #1C1EA8;
+    color: #BECCFA;
+}
+
+    .AccountDropDown:hover {
+        background-color: #1C1EA8;
+        color: #BECCFA;
+        border: #FFAB3C;
+    }
+
+    .AccountDropDown:checked {
+        background-color: #1C1EA8;
+        color: #BECCFA;
+    }
+
+
+.DropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.DropdownButton {
+    cursor: pointer;
+}
+
+.DropDown_Content {
+    display: none;
+    position: absolute;
+    background-color: #BECCFA;
+    min-width: 10em;
+    font-size: larger;
+    z-index: 1;
+    border: #1C1EA8 solid;
+}
+
+    .DropDown_Content a {
+        color: #1C1EA8;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.DropDown:hover .DropDown_Content {
+    display: block;
+}
+
+.DropDown_Content a:hover {
+    background-color: #1C1EA8;
+    color: #BECCFA;
+}

@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model AvansSurplusMealService.ViewModels.MealPacketViewModel
+
+<div class="container text-center">
+    <!-- Titel -->
+    <!-- Foto en reserveer knop -->
+
+
+    <section class="row">
+        <div class="col-lg-4 col-md-4">
+            <img src="~/css/Placeholder Image.png" alt="Pakketfoto" id="PakketMaaltijd" height="300"
+                 width="300">
+            <br />
+            <label for="PakketMaaltijd">Afbeelding pakket</label>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <div class="row">
+                <div class="col-lg-12 col-md-9">
+                    <div class="row">
+                        <div class="col-lg-4 BarPartDetail"></div>
+                        <h2 class=" col-lg-4 text-left GreenTxt">Pakket - detail</h2>
+                        <div class="col-lg-4 BarPartDetail"></div>
+                    </div>
+                    <div class="row">
+                        <article class="Description col-lg-7">
+                            <p>
+                                Naam: @Model.Name<br />
+                                Prijs: @Model.Price<br />
+                                Datum: @Model.PublishDate.ToShortDateString()<br />
+                                Afhaaldatum: @Model.DateToReceive.ToShortDateString()<br />
+                            </p>
+                        </article>
+                        <div class="col-lg-4 ReserveerSectie">
+                            <div class="Content">
+                                <h2>Reserveer deze maaltijd</h2>
+                                <button class="ImportantBtn">Reserveer</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Locaties -->
+    <section class="row">
+        <div class="col-lg-12 col-md-5">
+            <h3 class="TitleBorder">Locatie</h3>
+            <article>
+                <table class="tableBody">
+                    <tr>
+                        <th class="TableHeader">Stad</th>
+                        <td class="TableD">@Model.Cantine.City</td>
+                    </tr>
+                    <tr>
+                        <th class="TableHeader">Kantine</th>
+                        <td class="TableD">@Model.Cantine.Location</td>
+                    </tr>
+                    <tr>
+                        <th class="TableHeader">Serveert warme gerechten?</th>
+                        
+                            @if (Model.Cantine.ServesWarmMeals)
+                            { <td class="TableD">
+                                Ja
+                            </td>
+                            } else {
+                                <td>
+                                    Nee
+                                </td>
+                            }
+                    </tr>
+                    <tr>
+                        <th class="TableHeader">Overige informatie</th>
+                        <td class="TableD">
+                            @Model.Cantine.OtherInfo
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </div>
+    </section>
+    <!-- Afbeeldingen pakketten -->
+    <section class="row">
+        <h3 class="TitleBorder">Productlijst</h3>
+        <div class="col-lg-12 col-md-12">
+            <!-- Productlijst -->
+            <div class="FlexBox">
+                @foreach(var product in Model.ProductList){
+                    <div class="Flex-Item">
+                        <img src="~/css/Placeholder Image.png" alt="Product" height="200" width="200">
+                        <div class="Content">
+                            <h3>@product.Product.Name</h3>
+                            @if (product.Product.Alcoholic)
+                            {
+                                <p>Ja</p>
+                            } else {
+                                <p>Nee</p>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>

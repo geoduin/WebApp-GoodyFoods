@@ -1,0 +1,35 @@
+﻿._List {
+    justify-content: space-evenly;
+}
+
+.TagBar {
+    border-bottom: outset;
+    padding-bottom: 1em;
+}
+
+.FlexBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+    .FlexBox > .Flex-Item {
+        margin: 1em;
+        background-color: #317042;
+        border: #317042 solid;
+    }
+
+.Flex-Item {
+    color: #FFAB3C;
+}
+
+.CustomCard {
+    max-width: 500px;
+}
+
+a:hover {
+    background-color: #FFAB3C;
+    color: #317042;
+}
